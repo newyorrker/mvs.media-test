@@ -21,4 +21,5 @@
  **Ссылки на документацию:**
  
  https://codelabs.developers.google.com/codelabs/add-to-home-screen/#0
+ 
  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen
