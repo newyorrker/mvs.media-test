@@ -20,10 +20,10 @@ if('serviceWorker' in navigator) {
           pwaState.updatefound = false;
         }, 1000)
         setTimeout(() => {
-          pwaState.updated = true;
+          pwaState.cached = true;
         }, 1000)
         setTimeout(() => {
-          pwaState.updated = false;
+          pwaState.cached = false;
         }, 3000)
         console.log('Content has been cached for offline use.')
         console.log('some chcanges on cached');
@@ -32,7 +32,8 @@ if('serviceWorker' in navigator) {
         pwaState.updatefound = true;
         console.log('New content is downloading.')
       },
-      updated () {       
+      updated () {     
+        pwaState.updated = true;  
         console.log('New content is available; please refresh.')
       },
       offline () {

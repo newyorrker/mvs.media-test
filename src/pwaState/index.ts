@@ -1,4 +1,5 @@
 export const pwaState = {
   updatefound: false,
-  updated: false
+  updated: false,
+  cached: false
 }

@@ -5,7 +5,8 @@
       <br>
       <br>
       <span v-if="pwaState.updatefound">Есть обновления</span>
-      <span v-if="pwaState.updated">Обновлено</span>
+      <span v-if="pwaState.cached">Обновлено</span>
+      <span v-if="pwaState.updated">Доступна новая версия приложения, пожалуйста обновите страницу</span>
     </p>
   </div>
 </template>

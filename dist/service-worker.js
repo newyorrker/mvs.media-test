@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.c2e7df154af2ae43fb5adb41c63e2fde.js"
+  "precache-manifest.79116fad973e77bd869b1ad159c31d64.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mvs.media-test"});
