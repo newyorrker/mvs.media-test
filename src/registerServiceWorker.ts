@@ -26,6 +26,7 @@ if('serviceWorker' in navigator) {
           pwaState.updated = false;
         }, 3000)
         console.log('Content has been cached for offline use.')
+        console.log('some chcanges on cached');
       },
       updatefound () {
         pwaState.updatefound = true;
