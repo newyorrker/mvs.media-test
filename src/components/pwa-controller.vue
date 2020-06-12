@@ -3,7 +3,7 @@
     <p>
       <button v-if="showButton" @click="addToHomeScreen">Добавить на главный экран</button>
       <span v-if="pwaState.updatefound">Найдены обновления</span>
-      <span v-if="pwaState.updated">Обновлено</span>
+      <span v-if="pwaState.updated">Обновлено</span> 
     </p>
   </div>
 </template>
