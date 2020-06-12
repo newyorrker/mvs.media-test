@@ -16,19 +16,22 @@ if('serviceWorker' in navigator) {
         console.log('Service worker has been registered.')
       },
       cached () {
+        setTimeout(() => {
+          pwaState.updatefound = false;
+        }, 1000)
+        setTimeout(() => {
+          pwaState.updated = true;
+        }, 1000)
+        setTimeout(() => {
+          pwaState.updated = false;
+        }, 3000)
         console.log('Content has been cached for offline use.')
       },
       updatefound () {
         pwaState.updatefound = true;
         console.log('New content is downloading.')
       },
-      updated () {
-        pwaState.updatefound = false;
-        pwaState.updated = true;
-        setTimeout(() => {
-          pwaState.updated = false;
-        }, 1000)
-        
+      updated () {       
         console.log('New content is available; please refresh.')
       },
       offline () {

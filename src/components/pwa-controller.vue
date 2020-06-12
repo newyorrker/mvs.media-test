@@ -2,8 +2,10 @@
   <div class="pwa-controller">
     <p>
       <button v-if="showButton" @click="addToHomeScreen">Добавить на главный экран</button>
-      <span v-if="pwaState.updatefound">Найдены обновления</span>
-      <span v-if="pwaState.updated">Обновлено</span> 
+      <br>
+      <br>
+      <span v-if="pwaState.updatefound">Есть обновления</span>
+      <span v-if="pwaState.updated">Обновлено</span>
     </p>
   </div>
 </template>
@@ -24,21 +26,16 @@
       return {
         showButton: false,
         deferredPrompt: {} as BeforeInstallPromptEvent,
-        pwaState: {
-          updatefound: pwaState.updatefound,
-          updated: pwaState.updated
-        }
+        pwaState: pwaState
       }
     },
     methods: {
       promtHandler(e: BeforeInstallPromptEvent) {
-        console.log('object');
         if (!window.matchMedia('(display-mode: standalone)').matches) {  
           e.preventDefault();
           this.deferredPrompt = e;
           this.showButton = true;
         }
-        
       },
       addToHomeScreen() {
 
